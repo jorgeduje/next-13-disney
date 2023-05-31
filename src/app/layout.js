@@ -12,7 +12,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        suppressHydrationWarning={true}
+        className={inter.className}
+        style={{
+          minHeight: "calc(100vh - 250px)",
+          overflowX: "hidden",
+          backgroundColor: "rgb(26, 29, 41)",
+          transition: "opacity 200ms ease 0s",
+        }}
+      >
         <NavbarContainer />
         {children}
       </body>

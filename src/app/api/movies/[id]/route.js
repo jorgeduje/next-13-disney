@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 
 export function GET(request, {params}) {
-    console.log(params)
   const movies = [
     {
       id: 1,

@@ -2,8 +2,8 @@ import Movies from "@/components/pages/movies/Movies";
 
 const getData = async () => {
   const res = await fetch("http://localhost:3000/api/movies");
-  const data = await res.json();
-  return data;
+  // const data = await res.json();
+  return res.json();
 };
 
 // const getData = ()=>{

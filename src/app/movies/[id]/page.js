@@ -4,8 +4,8 @@ const getMovie = async (id) => {
   return movie;
 };
 
+
 const MovieDetail = async ({ params }) => {
-  // console.log(params.id);
   const movie = await getMovie(params.id);
   console.log("front:", movie)
   return <div>{movie.duration}</div>;

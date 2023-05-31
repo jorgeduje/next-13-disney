@@ -1,0 +1,32 @@
+{
+  "movies": [
+    {
+      "name": "iron man",
+      "description": "pelicula de hombre de hierro",
+      "category": "marvel",
+      "gender": ["comedia", "drama"],
+      "clasification": "all",
+      "releaseYear": "2001",
+      "frontImage": "imagen de portada",
+      "titleImage": "imagen que se ve en el detalle",
+      "bgImage": "imagen de fondo",
+      "cast": ["jenifer lopez", "jorge duje"],
+      "duration": 95
+    }
+  ],
+  "series": [
+    {
+      "name": "iron man",
+      "description": "pelicula de hombre de hierro",
+      "category": "marvel",
+      "gender": ["comedia", "drama"],
+      "clasification": "all",
+      "releaseYear": "2001",
+      "frontImage": "imagen de portada",
+      "titleImage": "imagen que se ve en el detalle",
+      "bgImage": "imagen de fondo",
+      "cast": ["jenifer lopez", "jorge duje"],
+      "season": 2
+    }
+  ]
+}

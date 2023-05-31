@@ -1,9 +1,4 @@
-"use client";
-
-import Image from "next/image";
-
 const Movies = ({ movies }) => {
-  console.log(movies);
   return (
     <div>
       {movies.map((e) => (

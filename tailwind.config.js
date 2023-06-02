@@ -22,6 +22,9 @@ module.exports = {
       width: {
         800: "800px",
       },
+      translate: {
+        5000: "-50%",
+      },
     },
   },
   plugins: [],

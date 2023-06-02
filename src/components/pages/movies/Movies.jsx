@@ -1,12 +1,11 @@
+import CardCategory from "@/components/common/cardCategory/CardCategory";
+import React from "react";
+
 const Movies = ({ movies }) => {
   return (
     <div>
-      {movies.map((e) => (
-        <div key={e.id}>
-          {/* <Image src={e.frontImage} width={200} height={200} alt="asd" style={{height: "auto"}} /> */}
-          <img src={e.frontImage} alt="asd" />
-          <h1>{e.name}</h1>
-        </div>
+      {movies.map((movie) => (
+        <CardCategory movie={movie} key={movie.id} />
       ))}
     </div>
   );

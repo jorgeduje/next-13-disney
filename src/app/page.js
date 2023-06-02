@@ -1,3 +1,4 @@
+import CardCategory from "@/components/common/cardCategory/CardCategory";
 import Movies from "@/components/pages/movies/Movies";
 
 const getData = async () => {
@@ -11,8 +12,9 @@ export default async function Home() {
   const movies = await getData();
   console.log(movies);
   return (
-    <div>
+    <main>
+      <CardCategory />
       <Movies movies={movies} />
-    </div>
+    </main>
   );
 }

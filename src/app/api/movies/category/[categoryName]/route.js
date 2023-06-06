@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export function GET() {
+export function GET(request, { params }) {
   const movies = [
     {
       id: 1,
@@ -352,7 +352,9 @@ export function GET() {
         "https://res.cloudinary.com/dishtratk/image/upload/v1686063300/disney-app/movies/scale_d5ambg.png",
       bgImage:
         "https://res.cloudinary.com/dishtratk/image/upload/v1686063389/disney-app/movies/scale_bxng3s.jpg",
-      cast: ["Salvatore Vecchio"],
+      cast: [
+        "Salvatore Vecchio",
+      ],
       duration: 44,
     },
     {
@@ -369,9 +371,14 @@ export function GET() {
         "https://res.cloudinary.com/dishtratk/image/upload/v1686063593/disney-app/movies/scale_sue6b3.png",
       bgImage:
         "https://res.cloudinary.com/dishtratk/image/upload/v1686063606/disney-app/movies/scale_yctvsq.jpg",
-      cast: ["Tate Donovan"],
+      cast: [
+        "Tate Donovan",
+      ],
       duration: 60,
     },
   ];
-  return NextResponse.json(movies);
+  let moviesFiltered = movies.filter(
+    (movie) => movie.category === params.categoryName
+  );
+  return NextResponse.json(moviesFiltered);
 }

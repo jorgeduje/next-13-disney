@@ -1,12 +1,39 @@
-
+"use client";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-const Movies = ({ movies }) => {
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./Movies.css";
+import CardMovie from "@/components/common/cardMovie/CardMovie";
+
+const Movies = ({ movies, gender }) => {
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    centerMode: false,
+  };
+
   return (
     <div>
-      {
-        movies.map( e => <h1 key={e.id}>{e.name}</h1>)
-      }
+      <h2 style={{ color: "red" }}>{gender}</h2>
+      <Slider {...settings}>
+        {movies
+          .filter((movie) => movie.gender.includes(gender))
+          .map((movie) => {
+            return (
+             <CardMovie key={movie.id} movie={movie} />
+            );
+          })}
+      </Slider>
     </div>
   );
 };

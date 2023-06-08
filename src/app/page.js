@@ -42,14 +42,29 @@ export default async function Home() {
         "https://res.cloudinary.com/dishtratk/video/upload/v1685723250/disney-app/video/1564676296-national-geographic_bopzzb.mp4",
     },
   ];
+  const arrGenders = [
+    "comedia",
+    "documental",
+    "familiar",
+    "animacion",
+    "amistad",
+  ];
+
   return (
-    <main>
+    <main
+      style={{
+        padding: "0 calc(3.5vw + 24px)",
+      }}
+    >
       <div className="flex flex-wrap flex-row justify-center items-center gap-11 m-10auto relative">
         {arrCategories.map((card) => (
           <CardCategory key={card.path} cardCategory={card} />
         ))}
       </div>
-      <Movies movies={movies} />
+
+      {arrGenders.map((gender) => (
+        <Movies key={gender} movies={movies} gender={gender} />
+      ))}
     </main>
   );
 }

@@ -6,7 +6,7 @@ const Navbar = ({ isActive }) => {
     <header
       className={`${
         isActive ? "bg-nav" : "bg-transparent"
-      } transition z-50 0.2s ease-in-out w-full h-70 px-9 flex justify-between items-centerm sticky top-0`}
+      } transition z-50 0.2s ease-in-out w-full h-70 px-9 flex justify-between items-centerm fixed top-0`}
     >
       <div className="w-4/5 flex">
         <ul className="flex w-800 items-center justify-between">
@@ -46,7 +46,7 @@ const Navbar = ({ isActive }) => {
             busqueda
           </Link>
           <Link
-            href={"/"}
+            href={"/myList"}
             className="uppercase text-white text-sm font-semibold flex items-center"
           >
             <Image

@@ -24,13 +24,13 @@ const Movies = ({ movies, gender }) => {
 
   return (
     <div>
-      <h2 style={{ color: "red" }}>{gender}</h2>
+      <h4 className="text-white text-xl capitalize">{gender}</h4>
       <Slider {...settings}>
         {movies
           .filter((movie) => movie.gender.includes(gender))
           .map((movie) => {
             return (
-             <CardMovie key={movie.id} movie={movie} />
+             <CardMovie key={movie.id} movie={movie} isInHome={true} />
             );
           })}
       </Slider>

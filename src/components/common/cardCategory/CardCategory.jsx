@@ -9,7 +9,7 @@ const CardCategory = ({ cardCategory }) => {
   return (
     <Link
       href={`/movies/category/${cardCategory.path}`}
-      className="w-240 h-[9vw] block overflow-hidden border-[3.5px] border-solid rounded-[10px] border-[#3a3c4a] shadow-[#000000b0_0_26px_30px_-10px,#000000b0_0_16px_10px_-10px] relative"
+      className="hover:border-[#fff] scale-100 hover:scale-105 duration-300 hover:duration-300 transition-[transform,box-shadow] hover:transition-[transform,box-shadow] ease-out hover:ease-out w-240 h-[9vw] block overflow-hidden border-[3.5px] border-solid rounded-[10px] border-[#3a3c4a] shadow-[#000000b0_0_26px_30px_-10px,#000000b0_0_16px_10px_-10px] relative"
     >
       <div
         className="w-full h-full relative overflow-hidden border-2 rounded-lg border-[#434450] shadow-[#000000b0_0_26px_30px_-10px,#000000b0_0_16px_10px_-10px] bg-[#3a3c4a] bg-gradient-to-b from-[#3a3c4a] to-[#242632]"

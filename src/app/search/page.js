@@ -31,14 +31,14 @@ const SearchPage = () => {
 
   console.log(movies);
   return (
-    <div>
+    <div style={{paddingTop: "100px"}}>
       <input
         type="text"
         placeholder="Type here"
         className="input input-ghost w-full max-w-lg"
         onChange={(e) => setName(e.target.value)}
       />
-      <div>
+      <div className="flex flex-wrap">
         {!name
           ? movies.map((movie) => <CardMovie key={movie.id} movie={movie} />)
           : moviesFilterd.map((movie) => (

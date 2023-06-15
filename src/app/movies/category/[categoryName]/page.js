@@ -7,7 +7,7 @@ const getData = async (name) => {
 const CategoryPage = async ({ params }) => {
   const moviesByCategory = await getData(params.categoryName);
 
-  return <div>{JSON.stringify(moviesByCategory)}</div>;
+  return <div style={{paddingTop: "100px"}}>{JSON.stringify(moviesByCategory)}</div>;
 };
 
 export default CategoryPage;

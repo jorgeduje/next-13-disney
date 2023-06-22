@@ -5,15 +5,18 @@ import { useSelector } from "react-redux";
 
 const MyList = () => {
   const { myList } = useSelector((store) => store.favSlice);
+  
 
   return (
     <div style={{ paddingTop: "100px" }}>
-      <h1>Aca van los favoritos</h1>
-      <div className="flex flex-wrap">
+      {
+        myList.length > 0 ? 
+        <div className="flex flex-wrap">
         {myList.map((movie) => (
           <CardMovie key={movie.id} movie={movie} />
-        ))}
-      </div>
+          ))}
+      </div> : <h1>aca fav</h1>
+        } 
     </div>
   );
 };

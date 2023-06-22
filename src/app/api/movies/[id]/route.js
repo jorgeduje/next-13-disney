@@ -378,6 +378,6 @@ export function GET( request, {params} ){
       },
     ];
 
-      const movieSelected = movies.find( (elemento)=> elemento.id === +params.id)
+    const movieSelected = movies.find( (elemento)=> elemento.id === +params.id)
     return NextResponse.json(movieSelected)
 }

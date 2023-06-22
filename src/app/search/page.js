@@ -31,14 +31,15 @@ const SearchPage = () => {
 
   console.log(movies);
   return (
-    <div style={{paddingTop: "100px"}}>
+    <div style={{ paddingTop: "100px", width: "100%" }}>
       <input
         type="text"
-        placeholder="Type here"
-        className="input input-ghost w-full max-w-lg"
+        placeholder="Título, personaje o género"
+        className="w-full h-[90px] pl-[80px] text-[44px] outline-none text-[#a8a9ad] bg-[#4b4e5a]"
         onChange={(e) => setName(e.target.value)}
       />
-      <div className="flex flex-wrap">
+
+      <div className="flex justify-center flex-wrap px-4">
         {!name
           ? movies.map((movie) => <CardMovie key={movie.id} movie={movie} />)
           : moviesFilterd.map((movie) => (

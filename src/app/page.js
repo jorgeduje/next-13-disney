@@ -1,4 +1,5 @@
 import CardCategory from "@/components/common/cardCategory/CardCategory";
+import Carousel from "@/components/common/carousel/Carousel";
 import Movies from "@/components/pages/movies/Movies";
 
 const getData = async () => {
@@ -9,6 +10,8 @@ const getData = async () => {
 
 // ESTO ES SERVER COMPONENT
 export default async function Home() {
+
+  console.log("me ejecute")
   const movies = await getData();
   const arrCategories = [
     {
@@ -54,10 +57,10 @@ export default async function Home() {
     <main
       style={{
         padding: "0 calc(3.5vw + 24px)",
-        paddingTop: "100px"
-
+        paddingTop: "80px",
       }}
     >
+      <Carousel movies={movies} />
       <div className="flex flex-wrap flex-row justify-center items-center gap-11 m-10auto relative">
         {arrCategories.map((card) => (
           <CardCategory key={card.path} cardCategory={card} />
@@ -65,7 +68,7 @@ export default async function Home() {
       </div>
 
       {arrGenders.map((gender) => (
-        <Movies key={gender} movies={movies} gender={gender}  />
+        <Movies key={gender} movies={movies} gender={gender} />
       ))}
     </main>
   );

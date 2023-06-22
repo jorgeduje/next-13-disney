@@ -19,7 +19,9 @@ export default function RootLayout({ children }) {
         style={{
           minHeight: "100vh",
           overflowX: "hidden",
-          backgroundColor: "rgb(26, 29, 41)",
+          background: "url(https://res.cloudinary.com/dishtratk/image/upload/v1687204209/disney-app/common/background_qwilef.png)",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
           transition: "opacity 200ms ease 0s",
         }}
       >

@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  myList: typeof window !== "undefined" ? JSON.parse(localStorage.getItem("favsMovies")) : [],
+  myList:
+    typeof window !== "undefined"
+      ? JSON.parse(localStorage.getItem("favsMovies"))
+      : [],
 };
 
 export const favSlice = createSlice({
@@ -18,7 +21,8 @@ export const favSlice = createSlice({
         );
         state.myList = newArray;
       }
-      typeof window !== "undefined" && localStorage.setItem("favsMovies", JSON.stringify(state.myList));
+      typeof window !== "undefined" &&
+        localStorage.setItem("favsMovies", JSON.stringify(state.myList));
     },
   },
 });

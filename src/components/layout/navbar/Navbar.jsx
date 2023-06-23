@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import "./NavBarStyles.css";
 
 const Navbar = ({ isActive }) => {
   return (
     <header
       className={`${
         isActive ? "bg-nav" : "bg-transparent"
-      } transition z-50 0.2s ease-in-out w-full h-70 px-9 flex justify-between items-centerm fixed top-0`}
+      } transition 0.2s ease-in-out w-full h-70 px-9 flex z-50 justify-between items-centerm fixed top-0`}
     >
       <div className="w-4/5 flex">
         <ul className="flex w-800 items-center justify-between">
@@ -21,7 +22,7 @@ const Navbar = ({ isActive }) => {
           </Link>
           <Link
             href="/"
-            className="uppercase text-white text-sm font-semibold flex items-center"
+            className="uppercase text-white text-sm font-semibold flex items-center relative"
           >
             <Image
               src="https://res.cloudinary.com/dishtratk/image/upload/v1685496959/disney-app/icons/home-svgrepo-com_ia70m1.svg"
@@ -30,10 +31,13 @@ const Navbar = ({ isActive }) => {
               height={20}
               className="w-4 h-4 m-2"
             />
-            inicio
+            <p className="relative">
+              inicio
+              <span className="underline-animation"></span>
+            </p>
           </Link>
           <Link
-            href={"/search"}
+            href="/search"
             className="uppercase text-white text-sm font-semibold flex items-center"
           >
             <Image
@@ -43,10 +47,13 @@ const Navbar = ({ isActive }) => {
               height={20}
               className="w-4 h-4 m-2"
             />
-            busqueda
+            <p className="relative">
+              busqueda
+              <span className="underline-animation"></span>
+            </p>
           </Link>
           <Link
-            href={"/myList"}
+            href="/myList"
             className="uppercase text-white text-sm font-semibold flex items-center"
           >
             <Image
@@ -56,10 +63,13 @@ const Navbar = ({ isActive }) => {
               height={20}
               className="w-4 h-4 m-2"
             />
-            mi lista
+            <p className="relative">
+              mi lista
+              <span className="underline-animation"></span>
+            </p>
           </Link>
           <Link
-            href={"/"}
+            href="/"
             className="uppercase text-white text-sm font-semibold flex items-center"
           >
             <Image
@@ -69,9 +79,15 @@ const Navbar = ({ isActive }) => {
               height={20}
               className="w-4 h-4 m-2"
             />
-            peliculas
+            <p className="relative">
+              peliculas
+              <span className="underline-animation"></span>
+            </p>
           </Link>
-          <Link href={"/"} className="uppercase text-white text-sm font-semibold flex items-center">
+          <Link
+            href="/"
+            className="uppercase text-white text-sm font-semibold flex items-center"
+          >
             <Image
               src="https://res.cloudinary.com/dishtratk/image/upload/v1685499471/disney-app/icons/tv-old-svgrepo-com_em2esh.svg"
               alt="series"
@@ -79,7 +95,10 @@ const Navbar = ({ isActive }) => {
               height={20}
               className="w-4 h-4 m-2"
             />
-            series
+            <p className="relative">
+              series
+              <span className="underline-animation"></span>
+            </p>
           </Link>
         </ul>
       </div>
